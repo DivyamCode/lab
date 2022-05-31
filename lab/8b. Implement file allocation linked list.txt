@@ -1,0 +1,42 @@
+#include<stdio.h>
+void main()
+{
+char a[10];
+int i,sb,eb,fb1 [10];
+printf("\n enter the file name:");
+scanf("%s",a);
+printf("\n Enter the starting block:");
+scanf("%d",&sb);
+printf("Enter the ending Block:");
+scanf("%d",&eb);
+for(i=0;i<5;i++)
+{
+printf("Enter the free block %d",i+1);
+scanf("%d" ,&fb1[i]);
+}
+printf("\n File name \t Starting block \t Ending block \n");
+printf("%s \t\t %d\t\t %d",a,sb,eb);
+printf("\n %s File Utilization of Linked type of following blocks:",a);
+printf("\n %d->",sb);
+for(i=0;i<5;i++)
+{
+printf("%d->",fb1[i]);
+} ;
+printf("%d\n",eb);
+}
+/*
+ enter the file name:operating
+
+ Enter the starting block:1
+Enter the ending Block:7
+Enter the free block 1-2
+Enter the free block 23
+Enter the free block 34
+Enter the free block 45
+Enter the free block 56
+
+ File name       Starting block          Ending block
+operating                1               7
+ operating File Utilization of Linked type of following blocks:
+ 1->-2->3->4->5->6->7
+ */
